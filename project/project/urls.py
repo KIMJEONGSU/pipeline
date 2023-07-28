@@ -17,8 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# 라우트(=경로)에 대한 것들을 작성
 urlpatterns = [
-    # 서버의 루트주소/login/ 라는 주소에 polls 앱 url을 연결시킨다는 의미
-    path('login/', include('login.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('',include('app.urls')),
 ]

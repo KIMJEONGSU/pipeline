@@ -89,3 +89,7 @@ Django의 장점은 이 admin페이지를 기본적으로 제공해준다는 점
 
 3. 서버 개발자가 django shell을 이용해서 직접 데이터 추가
 '''
+
+'''
+참고
+https://www.youtube.com/watch?v=T2yw6o6BIi4&list=PLuHgQVnccGMDLp4GH-rgQhVKqqZawlNwG&index=8'''
