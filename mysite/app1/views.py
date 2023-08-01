@@ -6,10 +6,14 @@ from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
+import logging
+logger = logging.getLogger('app1')
 
 def index(request):
+    logger.info("INFO 레벨로 출력")
     page = request.GET.get('page', '1')  # 페이지
     kw = request.GET.get('kw', '')  # 검색어
+    # 질문 목록 데이터는 아래 코드를 통해 얻을 수 있음. 작성일시는 역순으로 정렬해서 보여줌.
     question_list = Question.objects.order_by('-create_date')
     if kw:
         question_list = question_list.filter(
@@ -22,6 +26,7 @@ def index(request):
     paginator = Paginator(question_list, 10)  # 페이지당 10개씩 보여주기
     page_obj = paginator.get_page(page)
     context = {'question_list': page_obj, 'page': page, 'kw': kw}
+    # render 함수는 파이썬 데이터를 템플릿에 적용하여 HTML로 반환하는 함수.
     return render(request, 'app1/question_list.html', context)
 
 def detail(request, question_id):
