@@ -1,6 +1,6 @@
 # Django Web 구현과 데이터 파이프라인 구축
 
-* 프로젝트 기간 : 2023.07.28 ~ 진행중
+* 프로젝트 기간 : 진행중
 * skills : ```Python``` ```SQL``` ```Django``` ```AWS EC2``` ```?(데이터 웨어하우스)``` ```?(대시보드)```
 * 기술 스택 선택 이유
   - ```Django``` 
@@ -28,4 +28,4 @@
 ### 한계점 및 개선사항
 * 한계점
 * 개선사항
-  * Django REST Framework를 사용하여 API 구축 
+  * Django REST Framework를 사용하여 REST API 구축 
