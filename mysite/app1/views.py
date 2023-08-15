@@ -7,7 +7,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 import logging
-logger = logging.getLogger('app1')
+
+# 로거 인스턴스 생성.
+logger = logging.getLogger(__name__)
 
 def index(request):
     logger.info("INFO 레벨로 출력")
